@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		739C54E429DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54E329DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift */; };
-		739C54E629DDC0EB00C3CD56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54E529DDC0EB00C3CD56 /* ContentView.swift */; };
+		739C54E629DDC0EB00C3CD56 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54E529DDC0EB00C3CD56 /* MealListView.swift */; };
 		739C54E829DDC0ED00C3CD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739C54E729DDC0ED00C3CD56 /* Assets.xcassets */; };
 		739C54EB29DDC0ED00C3CD56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739C54EA29DDC0ED00C3CD56 /* Preview Assets.xcassets */; };
 		739C54F429DDC2BE00C3CD56 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54F329DDC2BE00C3CD56 /* Dessert.swift */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		739C54E029DDC0EB00C3CD56 /* DemoForFetchNevinchanyi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForFetchNevinchanyi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739C54E329DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoForFetchNevinchanyiApp.swift; sourceTree = "<group>"; };
-		739C54E529DDC0EB00C3CD56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		739C54E529DDC0EB00C3CD56 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
 		739C54E729DDC0ED00C3CD56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739C54EA29DDC0ED00C3CD56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		739C54F329DDC2BE00C3CD56 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				739C54E329DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift */,
-				739C54E529DDC0EB00C3CD56 /* ContentView.swift */,
+				739C54E529DDC0EB00C3CD56 /* MealListView.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739C54E629DDC0EB00C3CD56 /* ContentView.swift in Sources */,
+				739C54E629DDC0EB00C3CD56 /* MealListView.swift in Sources */,
 				739C54F429DDC2BE00C3CD56 /* Dessert.swift in Sources */,
 				739C54E429DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift in Sources */,
 				739C54FB29DDCCC900C3CD56 /* NetworkError.swift in Sources */,
