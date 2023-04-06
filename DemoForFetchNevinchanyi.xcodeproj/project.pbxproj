@@ -20,6 +20,9 @@
 		739C550129DDD34D00C3CD56 /* NetworkService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C550029DDD34D00C3CD56 /* NetworkService+Image.swift */; };
 		73A9AD4329DF57A600D47BBD /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4229DF57A600D47BBD /* MealListViewModel.swift */; };
 		73A9AD4529DF57C000D47BBD /* DessertCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4429DF57C000D47BBD /* DessertCellView.swift */; };
+		73A9AD4829DF587100D47BBD /* DessertDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4729DF587100D47BBD /* DessertDetailsView.swift */; };
+		73A9AD4A29DF588200D47BBD /* DessertDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4929DF588200D47BBD /* DessertDetailsViewModel.swift */; };
+		73A9AD4C29DF7D1D00D47BBD /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4B29DF7D1D00D47BBD /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		739C550029DDD34D00C3CD56 /* NetworkService+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Image.swift"; sourceTree = "<group>"; };
 		73A9AD4229DF57A600D47BBD /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		73A9AD4429DF57C000D47BBD /* DessertCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertCellView.swift; sourceTree = "<group>"; };
+		73A9AD4729DF587100D47BBD /* DessertDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsView.swift; sourceTree = "<group>"; };
+		73A9AD4929DF588200D47BBD /* DessertDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsViewModel.swift; sourceTree = "<group>"; };
+		73A9AD4B29DF7D1D00D47BBD /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		739C54F129DDC27D00C3CD56 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				73A9AD4629DF585900D47BBD /* DessertDetails */,
 				739C54E329DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift */,
 				73A9AD4129DF579600D47BBD /* MealList */,
 			);
@@ -101,6 +108,7 @@
 			children = (
 				739C54F329DDC2BE00C3CD56 /* Dessert.swift */,
 				739C54F529DDC5A600C3CD56 /* Mock.swift */,
+				73A9AD4B29DF7D1D00D47BBD /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +132,15 @@
 				73A9AD4429DF57C000D47BBD /* DessertCellView.swift */,
 			);
 			path = MealList;
+			sourceTree = "<group>";
+		};
+		73A9AD4629DF585900D47BBD /* DessertDetails */ = {
+			isa = PBXGroup;
+			children = (
+				73A9AD4729DF587100D47BBD /* DessertDetailsView.swift */,
+				73A9AD4929DF588200D47BBD /* DessertDetailsViewModel.swift */,
+			);
+			path = DessertDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +215,16 @@
 			files = (
 				739C54FF29DDD20300C3CD56 /* UIImage+Extenstion.swift in Sources */,
 				739C54E629DDC0EB00C3CD56 /* MealListView.swift in Sources */,
+				73A9AD4C29DF7D1D00D47BBD /* Ingredient.swift in Sources */,
 				739C54F429DDC2BE00C3CD56 /* Dessert.swift in Sources */,
 				73A9AD4529DF57C000D47BBD /* DessertCellView.swift in Sources */,
 				739C54E429DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift in Sources */,
 				739C550129DDD34D00C3CD56 /* NetworkService+Image.swift in Sources */,
+				73A9AD4829DF587100D47BBD /* DessertDetailsView.swift in Sources */,
 				739C54FB29DDCCC900C3CD56 /* NetworkError.swift in Sources */,
 				739C54F629DDC5A600C3CD56 /* Mock.swift in Sources */,
 				739C54F929DDC64E00C3CD56 /* Endpoint.swift in Sources */,
+				73A9AD4A29DF588200D47BBD /* DessertDetailsViewModel.swift in Sources */,
 				739C54FD29DDCCDF00C3CD56 /* NetworkService.swift in Sources */,
 				73A9AD4329DF57A600D47BBD /* MealListViewModel.swift in Sources */,
 			);

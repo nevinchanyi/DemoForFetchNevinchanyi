@@ -5,21 +5,30 @@
 //  Created by Kostiantyn Nevinchanyi on 4/5/23.
 //
 
-import Foundation
+import SwiftUI
 
 struct Meals: Decodable {
     let meals: [Dessert]
 }
 
 struct Dessert: Decodable, Identifiable {
-    let id: String // "53049"
-    let name: String // Apam balik
-    let thumbnail: String // https:\/\/www.themealdb.com\/images\/media\/meals\/adxcbq1619787919.jpg
+    let id: String
+    let name: String
+    let thumbnail: String
+    var instructions: String?
+    
+    // I'm not proud of this approach.
+    var strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11, strIngredient12, strIngredient13, strIngredient14, strIngredient15, strIngredient16, strIngredient17, strIngredient18, strIngredient19, strIngredient20: String?
+    var strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9, strMeasure10, strMeasure11, strMeasure12, strMeasure13, strMeasure14, strMeasure15, strMeasure16, strMeasure17, strMeasure18, strMeasure19, strMeasure20: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case name = "strMeal"
         case thumbnail = "strMealThumb"
+        case instructions = "strInstructions"
+        case strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11, strIngredient12, strIngredient13, strIngredient14, strIngredient15, strIngredient16, strIngredient17, strIngredient18, strIngredient19, strIngredient20
+
+        case strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9, strMeasure10, strMeasure11, strMeasure12, strMeasure13, strMeasure14, strMeasure15, strMeasure16, strMeasure17, strMeasure18, strMeasure19, strMeasure20
     }
     
     var imageURL: URL? {
@@ -34,7 +43,22 @@ extension Array where Element == Dessert {
     }
 }
 
-/*
- {"meals":[{"idMeal":"53049","strMeal":"Apam balik","strDrinkAlternate":null,"strCategory":"Dessert","strArea":"Malaysian","strInstructions":"Mix milk, oil and egg together. Sift flour, baking powder and salt into the mixture. Stir well until all ingredients are combined evenly.\r\n\r\nSpread some batter onto the pan. Spread a thin layer of batter to the side of the pan. Cover the pan for 30-60 seconds until small air bubbles appear.\r\n\r\nAdd butter, cream corn, crushed peanuts and sugar onto the pancake. Fold the pancake into half once the bottom surface is browned.\r\n\r\nCut into wedges and best eaten when it is warm.","strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/adxcbq1619787919.jpg","strTags":null,"strYoutube":"https:\/\/www.youtube.com\/watch?v=6R8ffRRJcrg","strIngredient1":"Milk","strIngredient2":"Oil","strIngredient3":"Eggs","strIngredient4":"Flour","strIngredient5":"Baking Powder","strIngredient6":"Salt","strIngredient7":"Unsalted Butter","strIngredient8":"Sugar","strIngredient9":"Peanut Butter","strIngredient10":"","strIngredient11":"","strIngredient12":"","strIngredient13":"","strIngredient14":"","strIngredient15":"","strIngredient16":"","strIngredient17":"","strIngredient18":"","strIngredient19":"","strIngredient20":"","strMeasure1":"200ml","strMeasure2":"60ml","strMeasure3":"2","strMeasure4":"1600g","strMeasure5":"3 tsp","strMeasure6":"1\/2 tsp","strMeasure7":"25g","strMeasure8":"45g","strMeasure9":"3 tbs","strMeasure10":" ","strMeasure11":" ","strMeasure12":" ","strMeasure13":" ","strMeasure14":" ","strMeasure15":" ","strMeasure16":" ","strMeasure17":" ","strMeasure18":" ","strMeasure19":" ","strMeasure20":" ","strSource":"https:\/\/www.nyonyacooking.com\/recipes\/apam-balik~SJ5WuvsDf9WQ","strImageSource":null,"strCreativeCommonsConfirmed":null,"dateModified":null}]}
-
- */
+extension Dessert {
+    
+    var ingredientList: [Ingredient] {
+        let ingredients = [
+            strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11, strIngredient12, strIngredient13, strIngredient14, strIngredient15, strIngredient16, strIngredient17, strIngredient18, strIngredient19, strIngredient20
+        ].compactMap({ $0 })
+        let measures = [
+            strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9, strMeasure10, strMeasure11, strMeasure12, strMeasure13, strMeasure14, strMeasure15, strMeasure16, strMeasure17, strMeasure18, strMeasure19, strMeasure20
+        ].compactMap({ $0 })
+        
+        var ingredientsTemp = [Ingredient]()
+                
+        for (ind, val) in ingredients.enumerated() {
+            let ingredient = Ingredient(name: val, measure: measures[ind])
+            ingredientsTemp.append(ingredient)
+        }
+        return ingredientsTemp.filter({ !$0.name.isEmpty })
+    }
+}

@@ -14,8 +14,8 @@ struct DessertCellView: View {
     @State private var uiImage: UIImage?
     
     var body: some View {
+        
         HStack {
-            
             if let uiImage {
                 Image(uiImage: uiImage)
                     .resizable()
@@ -37,6 +37,7 @@ struct DessertCellView: View {
     }
     private func getImage() {
         Task {
+            guard uiImage == nil else { return }
             let networkService = NetworkService()
             let image = try await networkService.getImage(with: dessert.imageURL)
             self.uiImage = image

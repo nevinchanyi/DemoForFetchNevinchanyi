@@ -11,14 +11,23 @@ struct MealListView: View {
     
     @StateObject private var viewModel = MealListViewModel()
     
+    @StateObject private var detailsViewModel = DessertDetailsViewModel()
+    
     var body: some View {
         List {
             ForEach(viewModel.desserts.sorted()) { dessert in
-                DessertCellView(dessert: dessert)
+                Button {
+                    detailsViewModel.pushView(dessert: dessert)
+                } label: {
+                    DessertCellView(dessert: dessert)
+                }
             }
         }
         .listStyle(.insetGrouped)
         .navigationTitle("Desserts")
+        .sheet(isPresented: $detailsViewModel.showView) {
+            DessertDetailsView(viewModel: detailsViewModel)
+        }
     }
 }
 
