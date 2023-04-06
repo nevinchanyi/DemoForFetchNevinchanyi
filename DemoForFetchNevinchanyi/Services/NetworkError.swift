@@ -13,6 +13,7 @@ enum NetworkError: Error {
     case unexpectedStatusCode(code: Int)
     case noResponse
     case decoding(data: String)
+    case cantDownloadImage(error: Error)
 }
 
 extension NetworkError: LocalizedError {
@@ -28,6 +29,8 @@ extension NetworkError: LocalizedError {
             return NSLocalizedString("No response.", comment: "")
         case .decoding:
             return NSLocalizedString("Decoding error.", comment: "")
+        case .cantDownloadImage:
+            return NSLocalizedString("Can't download image.", comment: "")
         }
     }
 }

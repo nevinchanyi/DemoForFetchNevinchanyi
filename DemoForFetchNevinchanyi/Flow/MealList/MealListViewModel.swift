@@ -1,31 +1,11 @@
 //
-//  ContentView.swift
+//  MealListViewModel.swift
 //  DemoForFetchNevinchanyi
 //
-//  Created by Kostiantyn Nevinchanyi on 4/5/23.
+//  Created by Kostiantyn Nevinchanyi on 4/6/23.
 //
 
-import SwiftUI
-
-struct MealListView: View {
-    
-    @StateObject private var viewModel = MealListViewModel()
-    
-    var body: some View {
-        VStack {
-            ForEach(viewModel.desserts.sorted()) { dessert in
-                Text(dessert.name)
-            }
-        }
-        .padding()
-    }
-}
-
-struct MealListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealListView()
-    }
-}
+import Foundation
 
 
 final class MealListViewModel: ObservableObject {

@@ -5,15 +5,22 @@
 //  Created by Kostiantyn Nevinchanyi on 4/5/23.
 //
 
-import Foundation
+import SwiftUI
 
 protocol NetworkServable {
+    
     func request<T>(
         endpoint: EndpointInterface,
         timeoutInterval: Double) async throws -> T where T: Decodable
+    
+    func getImage(
+        with url: URL?) async throws -> UIImage?
 }
 
 final class NetworkService: NetworkServable {
+    
+    let urlSession = URLSession.shared
+    let cache = NSCache<NSString, UIImage>()
     
     @discardableResult
     func request<T>(
@@ -29,7 +36,7 @@ final class NetworkService: NetworkServable {
         request.httpMethod = "GET"
         
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await urlSession.data(for: request)
             
             guard let response = response as? HTTPURLResponse else {
                 throw NetworkError.noResponse

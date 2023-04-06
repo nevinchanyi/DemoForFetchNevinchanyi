@@ -16,6 +16,10 @@
 		739C54F929DDC64E00C3CD56 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54F829DDC64E00C3CD56 /* Endpoint.swift */; };
 		739C54FB29DDCCC900C3CD56 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54FA29DDCCC900C3CD56 /* NetworkError.swift */; };
 		739C54FD29DDCCDF00C3CD56 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54FC29DDCCDF00C3CD56 /* NetworkService.swift */; };
+		739C54FF29DDD20300C3CD56 /* UIImage+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C54FE29DDD20300C3CD56 /* UIImage+Extenstion.swift */; };
+		739C550129DDD34D00C3CD56 /* NetworkService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C550029DDD34D00C3CD56 /* NetworkService+Image.swift */; };
+		73A9AD4329DF57A600D47BBD /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4229DF57A600D47BBD /* MealListViewModel.swift */; };
+		73A9AD4529DF57C000D47BBD /* DessertCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9AD4429DF57C000D47BBD /* DessertCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		739C54F829DDC64E00C3CD56 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		739C54FA29DDCCC900C3CD56 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		739C54FC29DDCCDF00C3CD56 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		739C54FE29DDD20300C3CD56 /* UIImage+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extenstion.swift"; sourceTree = "<group>"; };
+		739C550029DDD34D00C3CD56 /* NetworkService+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Image.swift"; sourceTree = "<group>"; };
+		73A9AD4229DF57A600D47BBD /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		73A9AD4429DF57C000D47BBD /* DessertCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 		739C54E229DDC0EB00C3CD56 /* DemoForFetchNevinchanyi */ = {
 			isa = PBXGroup;
 			children = (
+				739C54FE29DDD20300C3CD56 /* UIImage+Extenstion.swift */,
 				739C54F729DDC63500C3CD56 /* Services */,
 				739C54F229DDC28700C3CD56 /* Models */,
 				739C54F129DDC27D00C3CD56 /* Flow */,
@@ -82,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				739C54E329DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift */,
-				739C54E529DDC0EB00C3CD56 /* MealListView.swift */,
+				73A9AD4129DF579600D47BBD /* MealList */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -102,8 +111,19 @@
 				739C54F829DDC64E00C3CD56 /* Endpoint.swift */,
 				739C54FA29DDCCC900C3CD56 /* NetworkError.swift */,
 				739C54FC29DDCCDF00C3CD56 /* NetworkService.swift */,
+				739C550029DDD34D00C3CD56 /* NetworkService+Image.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		73A9AD4129DF579600D47BBD /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				739C54E529DDC0EB00C3CD56 /* MealListView.swift */,
+				73A9AD4229DF57A600D47BBD /* MealListViewModel.swift */,
+				73A9AD4429DF57C000D47BBD /* DessertCellView.swift */,
+			);
+			path = MealList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,13 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739C54FF29DDD20300C3CD56 /* UIImage+Extenstion.swift in Sources */,
 				739C54E629DDC0EB00C3CD56 /* MealListView.swift in Sources */,
 				739C54F429DDC2BE00C3CD56 /* Dessert.swift in Sources */,
+				73A9AD4529DF57C000D47BBD /* DessertCellView.swift in Sources */,
 				739C54E429DDC0EB00C3CD56 /* DemoForFetchNevinchanyiApp.swift in Sources */,
+				739C550129DDD34D00C3CD56 /* NetworkService+Image.swift in Sources */,
 				739C54FB29DDCCC900C3CD56 /* NetworkError.swift in Sources */,
 				739C54F629DDC5A600C3CD56 /* Mock.swift in Sources */,
 				739C54F929DDC64E00C3CD56 /* Endpoint.swift in Sources */,
 				739C54FD29DDCCDF00C3CD56 /* NetworkService.swift in Sources */,
+				73A9AD4329DF57A600D47BBD /* MealListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
